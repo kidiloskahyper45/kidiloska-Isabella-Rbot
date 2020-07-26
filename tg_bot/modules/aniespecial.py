@@ -1,5 +1,5 @@
 __help__ = """
-🌟Here You get a list of special commands. You can do funny tasks with it too so let's ENJOY that. For Any bugs or support join @ironman_support 🔥
+🌟Here You get a list of special commands. Let's Enjoy this. For Any bugs or support join @ironman_support 🔥
 
 - /time <query> : Gives information about a timezone.
 (Available queries : Country Code/Country Name/Timezone Name)
