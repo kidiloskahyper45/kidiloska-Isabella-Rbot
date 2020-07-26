@@ -28,17 +28,14 @@ from tg_bot.modules.translations.strings import tld
 PM_START_TEXT = """
 
 
-🙋Hello {}, My Name is {} !
+Hey there *{}*, My name is Ironman - I'm here to help you manage your groups!
+Click Help button to find out more about how to use me.
 
-I'm a powerful group management bot 🤖
+Join SUPPORT GROUP IF YOU NEED ANY HELP
+THIS BOT IS HAVING MORE AND EXCLUSIVE FEATURES!
+Made with love by *RC TEAM*
 
-👉Add me to your groups as admin to manage your groups with my commands🤩
-
-You can find my list of available commands with /help .
- 
-See [Basic Configuration Checklist](t.me/Anienews/3) on how to secure your group.
-
-[#include <std/disclaimer.h>](https://telegra.ph/Anie-Robot-05-27)
+So what are you waiting for? Add me in your groups and give full right to make me function well
 
 
 """
@@ -150,13 +147,11 @@ def start(bot: Bot, update: Update, args: List[str]):
             chat = update.effective_chat  # type: Optional[Chat]
             text = PM_START_TEXT
     
-            keyboard = [[InlineKeyboardButton(text=tld(chat.id, "Add Me To Your Group ♥️"), url="t.me/AnieRobot?startgroup=true")]]
-
-            keyboard += [[InlineKeyboardButton(text=tld(chat.id, "🌍 Join Our Support Chat 🌍"), url="https://t.me/AnieSupport")]]
-
-            keyboard += [[InlineKeyboardButton(text=tld(chat.id, "Updates ❓"), url="https://t.me/AnieNews")]]
-            
-            keyboard += [[InlineKeyboardButton(text="My Super Commands ⚙️", callback_data="help_back")]]
+            keyboard = [[InlineKeyboardButton(text="🆘️ Support Group🆘️", url="https://t.me/ironman_support"),
+                InlineKeyboardButton(text="💠Connect Group💠", callback_data="cntrl_panel_M")]]
+            keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
+                InlineKeyboardButton(text="❓Help", callback_data="help_back")]]
+            keyboard += [[InlineKeyboardButton(text="🔌 Add me",url="http://t.me/Ironman_pro_bot?startgroup=true")]]
             
             update.effective_message.reply_text(PM_START_TEXT.format(escape_markdown(first_name), bot.first_name), reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=False, parse_mode=ParseMode.MARKDOWN)
 
