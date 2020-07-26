@@ -91,7 +91,7 @@ def gban(bot: Bot, update: Update, args: List[str]):
 
         return
 
-    message.reply_text("⚡️ *Snaps the Banhammer* ⚡️ For Ungban Appeal Join @AnieSupport")
+    message.reply_text("⚡️ *STARTING GBANS* ⚡️ For Ungban Appeal Join @ironman_support")
 
     banner = update.effective_user  # type: Optional[User]
     send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
