@@ -1,6 +1,5 @@
 __help__ = """
-🌟Here You get a list of special commands. Let's Enjoy this. For Any bugs or support join @ironman_support 🔥
-
+🌟Here You get a list of special commands. Let's Enjoy this. For Any bugs or support join @AnieSupport 🔥
 - /time <query> : Gives information about a timezone.
 (Available queries : Country Code/Country Name/Timezone Name)
 - /cash : currency converter [example syntax: /cash 1 USD INR]
