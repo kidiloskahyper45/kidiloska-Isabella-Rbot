@@ -120,7 +120,7 @@ def table(bot: Bot, update: Update):
 
 
 __help__ = """
-This is the special module. For Support Join @ironman_support
+This is the special module.
  - /runs: reply a random string from an array of replies.
  - /slap: slap a user, or get slapped if not a reply.
  - /shrug : get shrug XD.
