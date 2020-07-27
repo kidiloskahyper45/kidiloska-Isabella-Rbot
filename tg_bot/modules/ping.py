@@ -104,6 +104,6 @@ PINGALL_HANDLER = DisableAbleCommandHandler("pingall", pingall)
 dispatcher.add_handler(PING_HANDLER)
 dispatcher.add_handler(PINGALL_HANDLER)
 
-__mod_name__ = "Ping✔"
+__mod_name__ = "Ping"
 __command_list__ = ["ping", "pingall"]
 __handlers__ = [PING_HANDLER, PINGALL_HANDLER]
