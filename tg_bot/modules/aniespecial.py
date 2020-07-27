@@ -27,6 +27,5 @@ that files/photos can't be imported due to telegram restrictions.
 - /banip {userid}:- you can ban a user ip , the user can't join your groups by using random accounts where the bot present. 
 - /scan :- Reply to a document , bot will scan your document like scanner(Comming Soon)
 - /google <text>: perform a google search(⚠️Not Working Now, Soon Work⚠️)
-- /sudolist :- See The Sudolist if you need any help.
 """
 __mod_name__ = "🥳Special✨"
