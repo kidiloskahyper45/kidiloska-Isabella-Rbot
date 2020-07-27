@@ -12,7 +12,6 @@ __help__ = """
 - /ud <word>: Type the word or expression you want to search use.
 - /urban <word>: Same as /ud
 - /blackout <text>: Apply Blackout Style to your text
-- /lyrics <song>: returns the lyrics of that song.
 - /tr (language code) as reply to a long message
 - /weather {Area Name} :- Find your area weather by using this command.
 - /zal type some text 
