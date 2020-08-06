@@ -28,7 +28,7 @@ from tg_bot.modules.translations.strings import tld
 PM_START_TEXT = """
 
 
-Hey there *{}*, My name is `Ironman` - I'm here to help you manage your groups!
+Hey there *{}*, My name is `Ironman` I'm here to help you manage your groups!
 Click Help button to find out more about how to use me.
 
 I'm here to make your group management fun and easy!
@@ -36,7 +36,7 @@ I have lots of handy features, such as flood control, a warning system, a note k
 
 So what are you waiting for? Add me in your groups and give full right to make me function well
 
-Join [Support](t.me/ironman_support) IF YOU NEED ANY HELP 
+JOIN [Support](t.me/ironman_support) IF YOU NEED ANY HELP 
 
 
 """
