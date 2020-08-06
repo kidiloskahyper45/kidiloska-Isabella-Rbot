@@ -36,7 +36,7 @@ I have lots of handy features, such as flood control, a warning system, a note k
 
 So what are you waiting for? Add me in your groups and give full right to make me function well
 
-Join (Support)[t.me/ironman_support] IF YOU NEED ANY HELP 
+Join [Support](t.me/ironman_support) IF YOU NEED ANY HELP 
 
 
 """
