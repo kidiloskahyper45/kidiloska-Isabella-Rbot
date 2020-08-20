@@ -44,7 +44,5 @@ that files/photos can't be imported due to telegram restrictions.
 - /info {userid}:- get information of a userv by using this.
 
 -/whois {username}
-
-- /banip {userid}:- you can ban a user ip , the user can't join your groups by using random accounts where the bot present.
 """
 __mod_name__ = "🥳Special✨"
