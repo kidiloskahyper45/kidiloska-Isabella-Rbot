@@ -60,8 +60,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
 
     try:
         chat.kick_member(user_id)
-        bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
-        message.reply_text("Banned!")
+        message.reply_text("Banned Successfully!")
         return log
 
     except BadRequest as excp:
@@ -142,7 +141,6 @@ def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
 
     try:
         chat.kick_member(user_id, until_date=bantime)
-        bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         message.reply_text("Banned! User will be banned for {}.".format(time_val))
         return log
 
