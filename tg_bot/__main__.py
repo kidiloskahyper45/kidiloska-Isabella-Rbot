@@ -150,7 +150,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             text = PM_START_TEXT
     
             keyboard = [[InlineKeyboardButton(text="🆘️ Support Group🆘️", url="https://t.me/ironman_support"),
-                InlineKeyboardButton(text="💠Updates💠", url="https://t.me/ironmanbot_updates)]]
+                InlineKeyboardButton(text="💠Updates💠", url="https://t.me/ironmanbot_updates")]]
             keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
                 InlineKeyboardButton(text="❓Help", callback_data="help_back")]]
             keyboard += [[InlineKeyboardButton(text="🔌 Add me",url="http://t.me/Ironman_pro_bot?startgroup=true")]]
