@@ -153,7 +153,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                 InlineKeyboardButton(text="🔧Updates", url="https://t.me/TG_BotZ")]]
             keyboard += [[InlineKeyboardButton(text="🇮🇳 Language", callback_data="set_lang_"), 
                 InlineKeyboardButton(text="❓Help", callback_data="help_back")]]
-            keyboard += [[InlineKeyboardButton(text="🔌 Add me",url="http://t.me/Ironman_pro_bot?startgroup=true")]]
+            keyboard += [[InlineKeyboardButton(text="🔌 Add me",url="http://t.me/Queen_isabellabot?startgroup=true")]]
             
             update.effective_message.reply_text(PM_START_TEXT.format(escape_markdown(first_name), bot.first_name), reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=False, parse_mode=ParseMode.MARKDOWN)
 
