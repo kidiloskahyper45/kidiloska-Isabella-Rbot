@@ -28,7 +28,7 @@ from tg_bot.modules.translations.strings import tld
 PM_START_TEXT = """
 
 
-Hey there *{}*, My name is `Ironman` I'm here to help you manage your groups!
+Hey there *{}*, My name is `Isabella` I'm here to help you manage your groups!
 
 I'm here to make your group management fun and easy!
 I have lots of handy features, such as flood control, a warning system, a note keeping system, and even replies on predetermined filters.
@@ -37,7 +37,7 @@ Click Help button to find out more about how to use me.
 
 So what are you waiting for? Add me in your groups and give full right to make me function well
 
-JOIN [Support](t.me/ironman_support) IF YOU NEED ANY HELP 
+JOIN [Support](t.me/TGB_Support) IF YOU NEED ANY HELP 
 
 
 """
@@ -149,9 +149,9 @@ def start(bot: Bot, update: Update, args: List[str]):
             chat = update.effective_chat  # type: Optional[Chat]
             text = PM_START_TEXT
     
-            keyboard = [[InlineKeyboardButton(text="🆘️ Support Group🆘️", url="https://t.me/ironman_support"),
-                InlineKeyboardButton(text="💠Updates💠", url="https://t.me/ironmanbot_updates")]]
-            keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
+            keyboard = [[InlineKeyboardButton(text="💻Support Group", url="https://t.me/ironman_support"),
+                InlineKeyboardButton(text="🔧Updates", url="https://t.me/ironmanbot_updates")]]
+            keyboard += [[InlineKeyboardButton(text="🇮🇳 Language", callback_data="set_lang_"), 
                 InlineKeyboardButton(text="❓Help", callback_data="help_back")]]
             keyboard += [[InlineKeyboardButton(text="🔌 Add me",url="http://t.me/Ironman_pro_bot?startgroup=true")]]
             
