@@ -91,7 +91,7 @@ def gban(bot: Bot, update: Update, args: List[str]):
 
         return
 
-    message.reply_text("⚡️ *STARTING GBANS* ⚡️ For Ungban Appeal Join @ironman_support")
+    message.reply_text("⚡️ *STARTING GBANS* Id Added to Gban Spam watch list ⚡️ For Ungban Appeal Join @TGB_Support")
 
     banner = update.effective_user  # type: Optional[User]
     send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
