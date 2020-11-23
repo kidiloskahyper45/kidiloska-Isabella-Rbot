@@ -7,16 +7,16 @@ import uuid
 from io import BytesIO
 import html
 
-import SaitamaRobot.modules.sql.feds_sql as sql
-from SaitamaRobot import (EVENT_LOGS, LOGGER, OWNER_ID, DRAGONS, TIGERS, WOLVES,
+import tg_bot.modules.sql.feds_sql as sql
+from tg_bot import (EVENT_LOGS, LOGGER, OWNER_ID, DRAGONS, TIGERS, WOLVES,
                           dispatcher)
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.helper_funcs.alternate import send_message
-from SaitamaRobot.modules.helper_funcs.chat_status import is_user_admin
-from SaitamaRobot.modules.helper_funcs.extraction import (extract_unt_fedban,
+from tg_bot.modules.disable import DisableAbleCommandHandler
+from tg_bot.modules.helper_funcs.alternate import send_message
+from tg_bot.modules.helper_funcs.chat_status import is_user_admin
+from tg_bot.modules.helper_funcs.extraction import (extract_unt_fedban,
                                                           extract_user,
                                                           extract_user_fban)
-from SaitamaRobot.modules.helper_funcs.string_handling import markdown_parser
+from tg_bot.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, MessageEntity,
                       ParseMode, Update)
 from telegram.error import BadRequest, TelegramError, Unauthorized
