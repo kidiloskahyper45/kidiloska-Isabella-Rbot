@@ -34,7 +34,7 @@ def check_user(user_id: int, bot: Bot, chat: Chat) -> Optional[str]:
         return reply
 
     if is_user_admin(chat, user_id, member) or user_id in TIGER_USERS:
-        reply = "I really wish I could mute admins...Perhaps a Punch?"
+        reply = "I really wish I could mute admins...Perhaps a 😒Punch?"
         return reply
 
     return None
@@ -75,7 +75,7 @@ def mute(bot: Bot, update: Update, args: List[str]) -> str:
         return log
 
     else:
-        message.reply_text("This user is already muted!")
+        message.reply_text("This user is already 🤭muted!")
 
     return ""
 
@@ -103,7 +103,7 @@ def unmute(bot: Bot, update: Update, args: List[str]) -> str:
                 and member.can_send_media_messages
                 and member.can_send_other_messages
                 and member.can_add_web_page_previews):
-            message.reply_text("This user already has the right to speak.")
+            message.reply_text("This user already has the right to speak🎙️.")
         else:
             bot.restrict_chat_member(chat.id, int(user_id),
                                      can_send_messages=True,
