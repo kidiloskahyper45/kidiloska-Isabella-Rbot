@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# Developed by @cyberw4rriors
+# Modified by meh 😑 
+# (c) cyberw4rriors
+
+# the logging things
 import html
 
 from typing import List
@@ -13,13 +20,13 @@ from tg_bot.modules.helper_funcs.chat_status import bot_admin
 
 @bot_admin
 @run_async
-def sudopromote(bot: Bot, update: Update, args: List[str]):
+def addsudo(bot: Bot, update: Update, args: List[str]):
     message = update.effective_message
     banner = update.effective_user
     user_id = extract_user(message, args)
     
     if not user_id:
-        message.reply_text("You don't seem to be referring to a user.")
+        message.reply_text("Refer a user first....")
         return ""
         
     if int(user_id) == OWNER_ID:
@@ -27,25 +34,25 @@ def sudopromote(bot: Bot, update: Update, args: List[str]):
         return ""
         
     if int(user_id) in SUDO_USERS:
-        message.reply_text("The user is already a sudo user.")
+        message.reply_text("Buddy this user is already a sudo user.")
         return ""
     
     with open("sudo_users.txt","a") as file:
         file.write(str(user_id) + "\n")
     
     SUDO_USERS.append(user_id)
-    message.reply_text("Succefully added to SUDO user list!")
+    message.reply_text("Succefully Added To SUDO List!")
         
     return ""
 
 @bot_admin
 @run_async
-def sudodemote(bot: Bot, update: Update, args: List[str]):
+def rsudo(bot: Bot, update: Update, args: List[str]):
     message = update.effective_message
     user_id = extract_user(message, args)
     
     if not user_id:
-        message.reply_text("You don't seem to be referring to a user.")
+        message.reply_text("Refer the user first.")
         return ""
 
     if int(user_id) == OWNER_ID:
@@ -64,8 +71,21 @@ def sudodemote(bot: Bot, update: Update, args: List[str]):
                 file.write(str(user) + "\n")
 
     SUDO_USERS.remove(user_id)
-    message.reply_text("Succefully removed from SUDO user list!")
+    message.reply_text("Yep Succefully removed from SUDO List!")
     
     return ""
 
 
+__help__ = """
+*Bot owner only:*
+ - /addsudo: promotes the user to SUDO USER
+ - /rsudo: demotes the user from SUDO USER
+"""
+
+__mod_name__ = "Sudo"
+
+addsudo_HANDLER = CommandHandler("addsudo", addsudo, pass_args=True, filters=Filters.user(OWNER_ID))
+rsudo_HANDLER = CommandHandler("rsudo", rsudo, pass_args=True, filters=Filters.user(OWNER_ID))
+
+dispatcher.add_handler(addsudo_HANDLER)
+dispatcher.add_handler(rsudo_HANDLER)
