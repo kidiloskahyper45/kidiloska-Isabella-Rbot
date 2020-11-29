@@ -68,6 +68,24 @@ def banall(bot: Bot, update: Update, args: List[int]):
             update.effective_message.reply_text(excp.message + " " + str(mems.user))
             continue
 
+
+@run_async
+def snipe(bot: Bot, update: Update, args: List[str]):
+    try:
+        chat_id = str(args[0])
+        del args[0]
+    except TypeError as excp:
+        update.effective_message.reply_text("Please give me a chat to echo to!")
+    to_send = " ".join(args)
+    if len(to_send) >= 2:
+        try:
+            bot.sendMessage(int(chat_id), str(to_send))
+        except TelegramError:
+            LOGGER.warning("Couldn't send to group %s", str(chat_id))
+            update.effective_message.reply_text("Couldn't send the message. Perhaps I'm not part of that group?")
+
+
+
 @bot_admin
 def leavechat(bot: Bot, update: Update, args: List[int]):
     if args:
@@ -115,11 +133,36 @@ def slist(bot: Bot, update: Update):
     message.reply_text(text1 + "\n", parse_mode=ParseMode.MARKDOWN)
     message.reply_text(text2 + "\n", parse_mode=ParseMode.MARKDOWN)
 
+__help__ = """
+**Owner only:**
+- /getlink **chatid**: Get the invite link for a specific chat.
+- /banall: Ban all members from a chat
+- /snipe **chatid** **string**: Make me send a message to a specific chat.
+- /leavechat **chatid** : leave a chat
+**Sudo/owner only:**
+- /quickscope **userid** **chatid**: Ban user from chat.
+- /quickunban **userid** **chatid**: Unban user from chat.
+- 
+- 
+- 
+- /Stats: check bot's stats
+- /chatlist: get chatlist
+- /gbanlist: get gbanned users list
 
+- Chat bans via /restrict chat_id and /unrestrict chat_id commands
+**Support user:**
+- /Gban : Global ban a user
+- /Ungban : Ungban a user
+- 
+- 
+Sudo/owner can use these commands too.
+**Users:**
+- /slist Gives a list of sudo and support users
+"""
 
 __mod_name__ = "Special"
 
-
+SNIPE_HANDLER = CommandHandler("snipe", snipe, pass_args=True, filters=Filters.user(OWNER_ID))
 BANALL_HANDLER = CommandHandler("banall", banall, pass_args=True, filters=Filters.user(OWNER_ID))
 QUICKSCOPE_HANDLER = CommandHandler("quickscope", quickscope, pass_args=True, filters=CustomFilters.sudo_filter)
 QUICKUNBAN_HANDLER = CommandHandler("quickunban", quickunban, pass_args=True, filters=CustomFilters.sudo_filter)
@@ -128,6 +171,7 @@ LEAVECHAT_HANDLER = CommandHandler("leavechat", leavechat, pass_args=True, filte
 SLIST_HANDLER = CommandHandler("slist", slist,
                            filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
 
+dispatcher.add_handler(SNIPE_HANDLER)
 dispatcher.add_handler(BANALL_HANDLER)
 dispatcher.add_handler(QUICKSCOPE_HANDLER)
 dispatcher.add_handler(QUICKUNBAN_HANDLER)
