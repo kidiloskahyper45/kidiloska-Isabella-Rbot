@@ -93,7 +93,7 @@ def new_member(bot: Bot, update: Update, job_queue: JobQueue):
 
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
-                update.effective_message.reply_text("Oh, Genos? Let's get this moving.")
+                update.effective_message.reply_text("Oh, omg? Owner arrived stay alert & don't mess whith him.")
                 welcome_log = (f"{html.escape(chat.title)}\n"
                                f"#USER_JOINED\n"
                                f"Bot Owner just joined the chat")
@@ -120,7 +120,7 @@ def new_member(bot: Bot, update: Update, job_queue: JobQueue):
 
             # Welcome yourself
             elif new_mem.id == bot.id:
-                update.effective_message.reply_text("hello Join @ironman_support😎")
+                update.effective_message.reply_text("hello Join @TG_BOTZ😎")
 
             else:
                 # If welcome message is media, send with appropriate function
@@ -272,7 +272,7 @@ def left_member(bot: Bot, update: Update):
 
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
-                update.effective_message.reply_text("Oi! Genos! He left..")
+                update.effective_message.reply_text("Oi! MY GOD! He left.🥺.")
                 return
 
             # Give the devs a special goodbye
@@ -351,7 +351,7 @@ def welcome(bot: Bot, update: Update, args: List[str]):
     elif len(args) >= 1:
         if args[0].lower() in ("on", "yes"):
             sql.set_welc_preference(str(chat.id), True)
-            update.effective_message.reply_text("Okay! I'll greet members when they join.")
+            update.effective_message.reply_text("Okay! I'll greet members when they join🤐.")
 
         elif args[0].lower() in ("off", "no"):
             sql.set_welc_preference(str(chat.id), False)
