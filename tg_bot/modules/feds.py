@@ -197,10 +197,11 @@ def join_fed(bot: Bot, update: Update, args: List[str]):
 
         x = sql.chat_join_fed(fedd, chat.id)
         if not x:
-                message.reply_text("Failed to join federation! Please head to @PhoenixSupport to report this.")
+                message.reply_text("Failed to join federation! Please head to @TG_BOTZ to report this.")
                 return
 
-        message.reply_text("Chat successfully added to federation!")
+        message.reply_text("Chat successfully added to federation: "\n{} (ID: <code>{}</code>)".format(info['fname'], fed_id")
+")
 
 
 @run_async
@@ -215,7 +216,8 @@ def leave_fed(bot: Bot, update: Update, args: List[str]):
 	if getuser in 'creator' or user.id in SUDO_USERS:
 		if sql.chat_leave_fed(chat.id) == True:
 			update.effective_message.reply_text("This chat has left the federation: {}!".format(fed_info['fname']))
-		else:
+		else:l
+
 			update.effective_message.reply_text("How can you leave a federation that you never joined?!")
 	else:
 		update.effective_message.reply_text("Only group creators can use this command!")
