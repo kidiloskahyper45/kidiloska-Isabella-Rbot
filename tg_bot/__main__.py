@@ -28,23 +28,23 @@ from tg_bot.modules.translations.strings import tld
 PM_START_TEXT = """
 
 
-Hey there *{}*, My name is `Isabella` I'm here to help you manage your groups!
+🚴Hey there *{}*, My name is `Isabella` I'm here to help you manage your 🚀groups!
 
-I'm here to make your group management fun and easy!
+I'm here to make your group management fun and 🛸easy!
 I have lots of handy features, such as flood control, a warning system, a note keeping system, and even replies on predetermined filters.
 
 Click Help button to find out more about how to use me.
 
-So what are you waiting for? Add me in your groups and give full right to make me function well
+So what are you waiting for? 👩‍✈️Add me in your groups and give full right to make me function well🚀
 
-JOIN [Support](t.me/TGB_Support) IF YOU NEED ANY HELP 
+🏓JOIN [Support](t.me/TGB_Support) IF YOU NEED ANY HELP 
 
 
 """
 
 HELP_STRINGS = """
 
-Hello! my name *{}*.
+🚀Hello! my name *{}*.
 
 *Main* commands available:
  - /start: start the bot
