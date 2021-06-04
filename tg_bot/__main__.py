@@ -37,7 +37,7 @@ Click Help button to find out more about how to use me.
 
 So what are you waiting for? 👩‍✈️Add me in your groups and give full right to make me function well🚀
 
-🏓JOIN [Support](t.me/TGB_Support) IF YOU NEED ANY HELP 
+🏓JOIN [Support](t.me/marvelmoviesstuff) IF YOU NEED ANY HELP 
 
 
 """
@@ -149,11 +149,11 @@ def start(bot: Bot, update: Update, args: List[str]):
             chat = update.effective_chat  # type: Optional[Chat]
             text = PM_START_TEXT
     
-            keyboard = [[InlineKeyboardButton(text="💻Support Group", url="https://t.me/TGB_Support"),
-                InlineKeyboardButton(text="🔧Updates", url="https://t.me/TG_BotZ")]]
+            keyboard = [[InlineKeyboardButton(text="💻Support Group", url="https://t.me/marvelmoviesstuff"),
+                InlineKeyboardButton(text="🔧Updates", url="https://t.me/marvelmoviesstuff")]]
             keyboard += [[InlineKeyboardButton(text="🇮🇳 Language", callback_data="set_lang_"), 
                 InlineKeyboardButton(text="❓Help", callback_data="help_back")]]
-            keyboard += [[InlineKeyboardButton(text="🔌 Add me",url="http://t.me/Queen_isabellabot?startgroup=true")]]
+            keyboard += [[InlineKeyboardButton(text="🔌 Add me",url="http://t.me/Telequinn_bot?startgroup=true")]]
             
             update.effective_message.reply_text(PM_START_TEXT.format(escape_markdown(first_name), bot.first_name), reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=False, parse_mode=ParseMode.MARKDOWN)
 
